@@ -34,6 +34,7 @@ ALLOWED_HOSTS = ['192.168.1.25',
 # Application definition
 
 INSTALLED_APPS = [
+    'SkyStackAPI.apps.SkystackapiConfig',
     'polls.apps.PollsConfig',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -81,6 +82,15 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+    },
+    'efault': {
+        'ENGINE': 'django.db.backends.postgresql',
+        #'NAME': 'liquidsky_dev_django',
+        'NAME': 'liquidsky_dev',
+        'USER': 'wawa',
+        'PASSWORD': 'wawa',
+        'HOST': '127.0.0.1',
+#        'PORT': '5432',
     }
 }
 
